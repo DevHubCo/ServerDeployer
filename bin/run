@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require "yaml"
+require_relative "../lib/bot"
+
+configs = YAML.load File.read("./config.yml")
+
+Bot.new(configs["host"], configs["user"], password: config["password"]).call
